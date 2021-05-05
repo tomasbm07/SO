@@ -152,7 +152,7 @@ int main() {
 		}
 		if (FD_ISSET(fd_hum[0], &read_set)) {
 		read(fd_hum[0], &value, sizeof(int));
-		printf("[SERVER received new humidity]: %d %% \n", value);
+		printf("[SERVER received new humidity]: %d\n", value);
 		hum_sum += value;
 		hum_samples++;
 		}

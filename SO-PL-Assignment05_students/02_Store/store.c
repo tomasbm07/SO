@@ -66,7 +66,7 @@ int main(void) {
   	// create threads client
   	for (i = 0; i < N_CLIENTS; i++) {
     	ids[i]=i+1;
-    	pthread_create(&my_thread[i], NULL, generate_requests, &ids[i]);
+    	pthread_create(&my_thread[i], NULL, generate_requests, NULL);
   	}
 
   	// wait until all threads client finish
